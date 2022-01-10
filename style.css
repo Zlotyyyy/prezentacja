@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+* {
+    margin:0;
+    padding:0;
+}
+
+body,html {
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+}
+
+body {
+    background:#48bfe3;
+    font-family:lato;
+}
+
+.start {
+    height:100vh;
+    width:100vw;
+    margin-top:-200vh;
+    background:linear-gradient(#48bfe3,#4ea8de);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    animation: start 6s ease-in-out forwards;
+}
+
+h1 {
+    text-align:center;
+    margin-top:-10vh;
+}
+
+.tytul h1 {
+    animation: krzywa 4s ease-in-out forwards 0s;
+}
+
+.autor h1 {
+    animation: krzywa 4s ease-in-out forwards 2s;
+}
+
+@keyframes krzywa {
+    0% {
+        transform:rotate(-90deg);
+    }
+
+    40% {
+        transform:rotate(0deg);
+    }
+
+    50% {
+        transform:rotate(0deg);
+    }
+
+    100% {
+        transform:rotate(120deg);
+    }
+
+}
+
+@keyframes start {
+    0% {
+        margin-top:100vh;
+    }
+    33% {
+        margin-top:0vh;
+    }
+    66% {
+        margin-top:-100vh;
+    }
+    100% {
+        margin-top:-200vh;
+    }
+}
+
+.autor {
+    height:100vh;
+    width:100vw;
+    background:linear-gradient(#4ea8de,#5390d9);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.prezentacja {
+    height:100vh;
+    width:100vw;
+    background:linear-gradient(#5390d9,#5e60ce);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow-y:auto !important;
+}
+
+input {
+    display:none;
+}
+
+.slajd {
+    width:25vw;
+    height:10vh;
+    outline: 3px solid gray;
+    border-radius:20px;
+    transform:scale(0) rotate(0deg);
+    animation: slajd 1s ease-in-out forwards calc(5s + (0.2s * var(--i)));
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.slajd1 {
+    top:5vh;
+    left:50px;
+}
+.slajd2 {
+    top:10vh;
+    right:50px;
+}
+.slajd3 {
+    top:15vh;
+    left:50px;
+}
+.slajd4 {
+    top:20vh;
+    right:50px;
+}
+.slajd5 {
+    top:25vh;
+    left:50px;
+}
+.slajd6 {
+    top:30vh;
+    right:50px;
+}
+.slajd7 {
+    top:35vh;
+    left:50px;
+}
+.slajd8 {
+    top:40vh;
+    right:50px;
+}
+.slajd9 {
+    top:45vh;
+    left:50px;
+}
+.slajd10 {
+    top:50vh;
+    right:50px;
+}
+.slajd11 {
+    top:55vh;
+    left:50px;
+}
+.slajd12 {
+    top:60vh;
+    right:50px;
+}
+
+
+@keyframes slajd {
+    0% {
+        transform:scale(0) rotate(0deg);
+    }
+    100% {
+        transform:scale(1) rotate(calc(10deg * var(--r)));
+    }
+}
